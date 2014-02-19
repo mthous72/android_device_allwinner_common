@@ -17,7 +17,7 @@
 # full nuclear product config
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 
-#DEVICE_PACKAGE_OVERLAYS := device/allwinner/common-sun5i/overlay
+#DEVICE_PACKAGE_OVERLAYS := device/allwinner/common/overlay
 
 PRODUCT_PACKAGES += \
 	hwcomposer.sun5i \
@@ -60,37 +60,37 @@ PRODUCT_PACKAGES += \
 
 # init.rc, kernel
 PRODUCT_COPY_FILES += \
-	device/allwinner/common-sun5i/init.rc:root/init.rc
+	device/allwinner/common/init.rc:root/init.rc
 
 # wifi conf
 PRODUCT_COPY_FILES += \
-	device/allwinner/common-sun5i/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
+	device/allwinner/common/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
 
 # gps.conf
 PRODUCT_COPY_FILES += \
-	device/allwinner/common-sun5i/gps.conf:system/etc/gps.conf
+	device/allwinner/common/gps.conf:system/etc/gps.conf
 
 # mali lib so
 PRODUCT_COPY_FILES += \
-	device/allwinner/common-sun5i/egl/gralloc.sun5i.so:system/lib/hw/gralloc.sun5i.so \
-	device/allwinner/common-sun5i/egl/libMali.so:system/lib/libMali.so \
-	device/allwinner/common-sun5i/egl/libUMP.so:system/lib/libUMP.so \
-	device/allwinner/common-sun5i/egl/egl.cfg:system/lib/egl/egl.cfg \
-	device/allwinner/common-sun5i/egl/libEGL_mali.so:system/lib/egl/libEGL_mali.so \
-	device/allwinner/common-sun5i/egl/libGLESv1_CM_mali.so:system/lib/egl/libGLESv1_CM_mali.so \
-	device/allwinner/common-sun5i/egl/libGLESv2_mali.so:system/lib/egl/libGLESv2_mali.so \
+	device/allwinner/common/egl/gralloc.sun5i.so:system/lib/hw/gralloc.sun5i.so \
+	device/allwinner/common/egl/libMali.so:system/lib/libMali.so \
+	device/allwinner/common/egl/libUMP.so:system/lib/libUMP.so \
+	device/allwinner/common/egl/egl.cfg:system/lib/egl/egl.cfg \
+	device/allwinner/common/egl/libEGL_mali.so:system/lib/egl/libEGL_mali.so \
+	device/allwinner/common/egl/libGLESv1_CM_mali.so:system/lib/egl/libGLESv1_CM_mali.so \
+	device/allwinner/common/egl/libGLESv2_mali.so:system/lib/egl/libGLESv2_mali.so \
 
 # preinstall script
 PRODUCT_COPY_FILES += \
-	device/allwinner/common-sun5i/preinstall.sh:/system/bin/preinstall.sh
+	device/allwinner/common/preinstall.sh:/system/bin/preinstall.sh
 
 #premission feature
 PRODUCT_COPY_FILES += \
-	device/allwinner/common-sun5i/tablet_core_hardware.xml:system/etc/permissions/tablet_core_hardware.xml \
-    device/allwinner/common-sun5i/config/android.hardware.location.xml:system/etc/permissions/android.hardware.location.xml \
-    device/allwinner/common-sun5i/config/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
-    device/allwinner/common-sun5i/config/android.hardware.touchscreen.xml:system/etc/permissions/android.hardware.touchscreen.xml \
-    device/allwinner/common-sun5i/config/android.hardware.touchscreen.multitouch.distinct.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.distinct.xml 
+	device/allwinner/common/tablet_core_hardware.xml:system/etc/permissions/tablet_core_hardware.xml \
+    device/allwinner/common/config/android.hardware.location.xml:system/etc/permissions/android.hardware.location.xml \
+    device/allwinner/common/config/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
+    device/allwinner/common/config/android.hardware.touchscreen.xml:system/etc/permissions/android.hardware.touchscreen.xml \
+    device/allwinner/common/config/android.hardware.touchscreen.multitouch.distinct.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.distinct.xml 
 
 #google service
 #PRODUCT_COPY_FILES += \
@@ -112,7 +112,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Overrides
 PRODUCT_BRAND  := allwinner
-PRODUCT_NAME   := common_sun5i
-PRODUCT_DEVICE := common-sun5i
+PRODUCT_NAME   := common
+PRODUCT_DEVICE := common
 
 
