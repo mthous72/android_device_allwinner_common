@@ -21,7 +21,7 @@ TARGET_PROVIDES_INIT_RC :=true
 USE_CAMERA_STUB := true
 
 #EGL stuff
-BOARD_EGL_CFG := device/allwinner/common-sun5i/egl/egl.cfg
+BOARD_EGL_CFG := device/allwinner/common/egl/egl.cfg
 USE_OPENGL_RENDERER := true
 ENABLE_WEBGL := true
 BOARD_USE_SKIA_LCDTEXT := true
@@ -46,15 +46,15 @@ CEDARX_USE_SWAUDIO := Y
 BOARD_USES_ROOT_SU := true
 
 # hardware module include file path
-TARGET_HARDWARE_INCLUDE := $(TOP)/device/allwinner/common-sun5i/hardware/include
-TARGET_SPECIFIC_HEADER_PATH := device/allwinner/common-sun5i/hardware/include
+TARGET_HARDWARE_INCLUDE := $(TOP)/device/allwinner/common/hardware/include
+TARGET_SPECIFIC_HEADER_PATH := device/allwinner/common/hardware/include
 
 MALI:
-	make -C $(TOP)/device/allwinner/common-sun5i/mali LICHEE_KDIR=${KERNEL_OUT} ARCH=arm CROSS_COMPILE=arm-eabi-
-	cp $(TOP)/device/allwinner/common-sun5i/mali/*.ko $(KERNEL_MODULES_OUT)
+	make -C $(TOP)/device/allwinner/common/mali LICHEE_KDIR=${KERNEL_OUT} ARCH=arm CROSS_COMPILE=arm-eabi-
+	cp $(TOP)/device/allwinner/common/mali/*.ko $(KERNEL_MODULES_OUT)
 
 CEDARX: 
-	make -C $(TOP)/device/allwinner/common-sun5i/cedarx LICHEE_KDIR=${KERNEL_OUT} ARCH=arm CROSS_COMPILE=arm-eabi-
-	cp $(TOP)/device/allwinner/common-sun5i/cedarx/*.ko $(KERNEL_MODULES_OUT)
+	make -C $(TOP)/device/allwinner/common/cedarx LICHEE_KDIR=${KERNEL_OUT} ARCH=arm CROSS_COMPILE=arm-eabi-
+	cp $(TOP)/device/allwinner/common/cedarx/*.ko $(KERNEL_MODULES_OUT)
 
 TARGET_KERNEL_MODULES := MALI CEDARX
