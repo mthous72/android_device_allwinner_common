@@ -49,12 +49,12 @@ BOARD_USES_ROOT_SU := true
 TARGET_HARDWARE_INCLUDE := $(TOP)/device/allwinner/common/hardware/include
 TARGET_SPECIFIC_HEADER_PATH := device/allwinner/common/hardware/include
 
-MALI:
-	make -C $(TOP)/device/allwinner/common/mali LICHEE_KDIR=${KERNEL_OUT} ARCH=arm CROSS_COMPILE=arm-eabi-
-	cp $(TOP)/device/allwinner/common/mali/*.ko $(KERNEL_MODULES_OUT)
+#MALI:
+#	make -C $(TOP)/device/allwinner/common/mali LICHEE_KDIR=${KERNEL_OUT} ARCH=arm CROSS_COMPILE=arm-eabi-
+#	cp $(TOP)/device/allwinner/common/mali/*.ko $(KERNEL_MODULES_OUT)
 
-CEDARX: 
-	make -C $(TOP)/device/allwinner/common/cedarx LICHEE_KDIR=${KERNEL_OUT} ARCH=arm CROSS_COMPILE=arm-eabi-
-	cp $(TOP)/device/allwinner/common/cedarx/*.ko $(KERNEL_MODULES_OUT)
+#CEDARX: 
+#	make -C $(TOP)/device/allwinner/common/cedarx LICHEE_KDIR=${KERNEL_OUT} ARCH=arm CROSS_COMPILE=arm-eabi-
+#	cp $(TOP)/device/allwinner/common/cedarx/*.ko $(KERNEL_MODULES_OUT)
 
-TARGET_KERNEL_MODULES := MALI CEDARX
+#TARGET_KERNEL_MODULES := MALI CEDARX
